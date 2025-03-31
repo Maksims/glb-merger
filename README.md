@@ -14,6 +14,7 @@ Additionally it can merge meshes into a **single mesh** with **atlasing textures
 # Usage
 
 ```bash
+npm install
 node main.js --files ./path/to/file.glb --output ./path/to/output.glb
 ```
 
