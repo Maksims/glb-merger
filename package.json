@@ -1,0 +1,20 @@
+{
+  "name": "GLB Merger",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@gltf-transform/core": "^4.1.2",
+    "@gltf-transform/functions": "^4.1.2",
+    "command-line-args": "^6.0.1",
+    "draco3dgltf": "^1.5.7",
+    "meshoptimizer": "^0.23.0",
+    "ndarray": "^1.0.19"
+  }
+}
