@@ -8,11 +8,11 @@ import { Document, NodeIO, Logger } from '@gltf-transform/core';
 import { KHRONOS_EXTENSIONS } from '@gltf-transform/extensions';
 import { prune, unpartition, sparse, simplify, weld, flatten, getSceneVertexCount, VertexCountMethod } from '@gltf-transform/functions';
 import { MeshoptSimplifier } from 'meshoptimizer';
-import { createAtlases, remapUvsToAtlas, copyTexturesToAtlases } from './atlas.js';
-import { mergeDocuments, mergeSkeletons, reparentPrimitives, mergePrimitives, removePrimitivesByNaterials } from './merger.js';
-import { cleanupTextures, resizeTextures } from './textures.js';
-import { initializeDraco, compressGeometry } from './compression.js';
-import { inspect, humanFileSize, parseArgs } from './utils.js';
+import { createAtlases, remapUvsToAtlas, copyTexturesToAtlases } from './includes/atlas.js';
+import { mergeDocuments, mergeSkeletons, reparentPrimitives, mergePrimitives, removePrimitivesByNaterials } from './includes/merger.js';
+import { cleanupTextures, resizeTextures } from './includes/textures.js';
+import { initializeDraco, compressGeometry } from './includes/compression.js';
+import { inspect, humanFileSize, parseArgs } from './includes/utils.js';
 
 const start = performance.now();
 
