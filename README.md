@@ -13,7 +13,7 @@ Additionally it can merge meshes into a **single mesh** with **atlasing textures
 
 # Usage
 
-```bash
+```posh
 npm install
 node main.js --files ./path/to/file.glb --output ./path/to/output.glb
 ```
@@ -57,7 +57,7 @@ Print resulting GLBs structure: scenes, meshes, materials, textures.
 
 # Examples
 
-```bash
+```posh
 # lossless merge of GLBs
 node main.js --files ./fileA.glb ./fileB.glb --output ./output.glb
 
