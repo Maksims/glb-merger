@@ -56,11 +56,12 @@ export const mergeSkeletons = (document, sceneMain, merge) => {
                 }
             }
 
-            if (merge) {
-                child.setName('model');
+            // name
+            const mesh = child.getMesh();
+            if (mesh) {
+                child.setName(mesh.getName());
             } else {
-                const slot = slots[i - 1];
-                child.setName(slot);
+                child.setName('node');
             }
 
             // copy nodes to main scene

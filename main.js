@@ -71,18 +71,18 @@ mergeDocuments(main, documents);
 
 
 // remove primitives
-if (LOD >= 1) {
-    removePrimitivesByNaterials(main, (primitive) => {
-        const name = primitive.getMaterial().getName();
+removePrimitivesByNaterials(main, (primitive) => {
+    const name = primitive.getMaterial().getName();
 
-        if ((LOD >= 2 && name.includes('Eyes'))
-            || name.includes('Teeth')
-            || (name.includes('FullBody') && name.includes('Hair'))) {
-            return true;
-        }
-    });
-    await main.transform(prune());
-}
+    if (name === 'WorldGridMaterial') return true;
+
+    if ((LOD >= 2 && name.includes('Eyes'))
+        || name.includes('Teeth')
+        || (name.includes('FullBody') && name.includes('Hair'))) {
+        return true;
+    }
+});
+await main.transform(prune());
 
 
 // merge skeletons
